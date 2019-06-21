@@ -14,10 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         widget.cpp \
-    sdlWidget/sdl_renderwnd.cpp
+    sdlWidget/sdl_renderwnd.cpp \
+    audiodefine.cpp
 
 HEADERS  += widget.h \
-    sdlWidget/sdl_renderwnd.h
+    sdlWidget/sdl_renderwnd.h \
+    audiodefine.h
 
 FORMS    += widget.ui
 
@@ -39,10 +41,12 @@ LIBS += -L$$PWD/3rdPart/ffmpeg/lib \
     -lavformat \
     -lavutil \
     -lpostproc \
-    -lswscale
+    -lswscale \
+    -lswresample
 
 LIBS += -L$$PWD/3rdPart/sdl2/lib/x86 \
-    -lSDL2
+    -lSDL2 \
+    -lSDL2main
 
 RESOURCES +=
 

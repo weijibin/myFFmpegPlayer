@@ -18,7 +18,13 @@ extern "C" {
     #include "libavutil/imgutils.h"
 
 
+    #include<stdio.h>
+    #include<assert.h>
+    #include <libswresample/swresample.h>
+
+
     #include <SDL.h>
+    #include <SDL_thread.h>
 
     #undef main   /* Prevents SDL from overriding main() */
 
@@ -35,8 +41,6 @@ class Widget : public QWidget
 public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
-
-    void testSDL();
 
     int play();
 private:
